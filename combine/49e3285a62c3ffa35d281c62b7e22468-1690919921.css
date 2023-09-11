@@ -1,0 +1,192 @@
+:target {
+    scroll-margin-top: 4.5rem
+}
+
+.alert>:last-child {
+    margin-bottom: 0 !important
+}
+
+.navbar.navbar-thin {
+    --bs-navbar-padding-y: 0.25rem
+}
+
+.mw-50 {
+    max-width: 50% !important
+}
+
+.offcanvas.offcanvas-start {
+    --bs-offcanvas-width: 300px
+}
+
+@media (min-width:576px) {
+    .visible-sm {
+        visibility: visible !important
+    }
+    .invisible-sm {
+        visibility: hidden !important
+    }
+}
+
+@media (min-width:768px) {
+    .visible-md {
+        visibility: visible !important
+    }
+    .invisible-md {
+        visibility: hidden !important
+    }
+}
+
+@media (min-width:992px) {
+    .pb-lg-dd-y {
+        padding-bottom: var(--bs-dropdown-padding-y)
+    }
+    .pt-lg-dd-y {
+        padding-top: var(--bs-dropdown-padding-y)
+    }
+    .visible-lg {
+        visibility: visible !important
+    }
+    .invisible-lg {
+        visibility: hidden !important
+    }
+}
+
+@media (min-width:1200px) {
+    .visible-xl {
+        visibility: visible !important
+    }
+    .invisible-xl {
+        visibility: hidden !important
+    }
+}
+
+@media (min-width:1400px) {
+    .visible-xxl {
+        visibility: visible !important
+    }
+    .invisible-xxl {
+        visibility: hidden !important
+    }
+}
+
+.head-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    column-gap: 0.5rem;
+    margin-top: 1rem
+}
+
+.head-list>a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 8rem;
+    width: 6rem;
+    row-gap: 0.5rem;
+    text-align: center
+}
+
+.head-commands-box {
+    justify-content: flex-start
+}
+
+.head-commands-box>.tab-control-wrapper .nav-link {
+    border-radius: 0 !important;
+    background-color: var(--bs-secondary-bg)
+}
+
+.head-commands-box>.tab-control-wrapper .nav-link.active {
+    background-color: var(--bs-nav-pills-link-active-bg)
+}
+
+.head-command {
+    display: block;
+    font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+    height: 5rem;
+    width: 100%
+}
+
+@media screen {
+    body {
+        --bs-body-bg: #4d87c7
+    }
+    body * {
+        --bs-body-bg: #fff
+    }
+}
+
+#site-head {
+    background: url("../themes/mch-v2/assets/images/header/header-day.webp") no-repeat top center
+}
+
+#site-main {
+    /* background-color: var(--bs-body-bg) */
+}
+
+#header-image {
+    align-items: center;
+    display: flex;
+    height: 150px
+}
+
+#site-title {
+    background: url("../themes/mch-v2/assets/images/header/minecraft-heads.webp") no-repeat top left;
+    background-size: contain;
+    height: 49px;
+    overflow: hidden;
+    padding-top: 50px;
+    width: 244px
+}
+
+@media screen and (min-width:500px) {
+    #site-title {
+        height: 99px;
+        padding-top: 100px;
+        width: 487px
+    }
+}
+
+.card-blue {
+    border: 1px solid #B8DAFF !important
+}
+
+.card-blue .card-header {
+    background-color: #CCE5FF !important;
+    border-bottom: 1px solid #B8DAFF !important
+}
+
+.card-patreon {
+    border: 1px solid #F96854 !important;
+    background-color: #FCB6AC !important
+}
+
+.card-patreon .card-header {
+    background-color: #FA8676 !important;
+    border-bottom: 1px solid #FF424D !important
+}
+
+.card-serverhosting .discount {
+    color: #F00;
+    font-weight: bold
+}
+
+.card-serverhosting .promocode {
+    border: 2px solid #B2FF2B;
+    background: #1F1F1F;
+    color: #b2ff2b
+}
+
+.btn-patreon {
+    background-image: url("../themes/mch-v2/assets/images/patreon_small.webp");
+    background-size: 100%;
+    background-color: #F96855 !important;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    width: 100px
+}
+
+main img {
+    max-width: 100%
+}

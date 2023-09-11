@@ -1,0 +1,256 @@
+html {
+    height: 100%
+}
+
+body {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3.5rem min-content 90px 1fr 90px min-content;
+    grid-template-areas: "nav" "header" "adtop" "main" "adbottom" "footer";
+    min-width: 320px
+}
+
+img,
+iframe,
+video,
+picture,
+svg {
+    max-width: 100% !important
+}
+
+#social-nav>.container,
+#site-head>.container,
+#global-nav>.container,
+#site-main,
+#site-foot,
+#site-foot>.container {
+    max-width: 1070px;
+    min-width: 320px
+}
+
+#social-nav {
+    grid-area: nav
+}
+
+#site-head {
+    grid-area: header
+}
+
+#site-main {
+    grid-area: main
+}
+
+#ad-module-left,
+#ad-module-right {
+    display: none
+}
+
+#content-main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-areas: "content-header" "above-main-content" "content-main" "content-sidebar"
+}
+
+#content-main>header {
+    grid-area: content-header
+}
+
+#content-main>header.full {
+    grid-column: -3 / -1
+}
+
+#content-main>#above-main-content {
+    grid-area: above-main-content
+}
+
+#content-main>#above-main-content.full {
+    grid-column: -3 / -1
+}
+
+#content-main>main {
+    grid-area: content-main
+}
+
+#content-main>main.full {
+    grid-column: -3 / -1
+}
+
+#content-main>aside {
+    grid-area: content-sidebar;
+    background-color: #F6F6F6
+}
+
+#main-sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "sidebar-ad-top" "sidebar-content" "sidebar-ad-bottom";
+    padding: 1rem
+}
+
+#main-sidebar>h4:first-child {
+    margin-bottom: 0
+}
+
+#main-sidebar>.ad-placeholder {
+    margin-top: 1rem
+}
+
+#main-sidebar .card {
+    margin-top: 1rem
+}
+
+#sidebar-ad-1 {
+    order: -99
+}
+
+#sidebar-ad-2 {
+    order: 99
+}
+
+#site-foot {
+    grid-area: footer
+}
+
+#ad-module-left {
+    grid-area: ad1
+}
+
+#ad-module-right {
+    grid-area: ad2
+}
+
+#ad-module-top {
+    grid-area: adtop
+}
+
+#ad-module-bottom {
+    grid-area: adbottom
+}
+
+.ad-placeholder {
+    align-items: center;
+    background-color: #6C757D;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    width: 100%
+}
+
+#discord-widget:first-child {
+    margin-top: 0 !important
+}
+
+@media screen and (min-width:481px) {
+    #main-sidebar {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "sidebar-ad-top sidebar-ad-top" "sidebar-content sidebar-content" "sidebar-ad-bottom sidebar-ad-bottom";
+        column-gap: 1rem
+    }
+    #main-sidebar>h4:first-child {
+        grid-column: -3 / -1
+    }
+    #sidebar-ad-1 {
+        grid-column: 1 / span 2
+    }
+    #sidebar-ad-2 {
+        grid-column: 1 / span 2
+    }
+}
+
+@media screen and (max-width:767px) {
+    #sidebar-ad-1 {
+        margin-top: 0 !important
+    }
+}
+
+@media screen and (min-width:768px) {
+    body {
+        grid-template-rows: 3.5rem min-content 90px 1fr min-content;
+        grid-template-areas: "nav" "header" "adtop" "main" "footer"
+    }
+    #content-main {
+        grid-template-columns: 1fr 300px;
+        grid-template-areas: "content-header content-sidebar" "content-main content-sidebar"
+    }
+    #main-sidebar {
+        display: block
+    }
+    #main-sidebar .card:first-child {
+        margin-top: 0
+    }
+    #ad-module-bottom {
+        display: none
+    }
+}
+
+@media screen and (min-width:1071px) and (max-width:1229px) {
+    body {
+        grid-template-columns: 1fr 1070px 1fr;
+        grid-template-areas: "nav nav nav" "header header header" " . adtop ." ". main ." ". footer ."
+    }
+}
+
+@media screen and (min-width:1230px) {
+    #ad-module-right {
+        display: block
+    }
+}
+
+@media screen and (min-width:1230px) and (max-width:1369px) {
+    body {
+        grid-template-columns: 1fr 1070px 160px 1fr;
+        grid-template-areas: "nav nav nav nav" "header header header header" ". adtop ad2 ." ". main ad2 ." ". footer ad2 ."
+    }
+    #social-nav>.container,
+    #global-nav>.container,
+    #header-image {
+        margin-left: calc(calc(100% - 1070px - 160px) / 2)
+    }
+}
+
+@media screen and (min-width:1370px) and (max-width:1389px) {
+    body {
+        grid-template-columns: 1fr 1070px 300px 1fr;
+        grid-template-areas: "nav nav nav nav" "header header header header" ". adtop ad2 ." ". main ad2 ." ". footer ad2 ."
+    }
+    #social-nav>.container,
+    #global-nav>.container,
+    #header-image {
+        margin-left: calc(calc(100% - 1070px - 300px) / 2)
+    }
+}
+
+@media screen and (min-width:1390px) {
+    #ad-module-left {
+        display: block
+    }
+}
+
+@media screen and (min-width:1390px) and (max-width:1529px) {
+    body {
+        grid-template-columns: 1fr 160px 1070px 160px 1fr;
+        grid-template-areas: "nav nav nav nav nav" "header header header header header" ". ad1 adtop ad2 ." ". ad1 main ad2 ." ". ad1 footer ad2 ."
+    }
+}
+
+@media screen and (min-width:1530px) and (max-width:1669px) {
+    body {
+        grid-template-columns: 1fr 160px 1070px 300px 1fr;
+        grid-template-areas: "nav nav nav nav nav" "header header header header header" ". ad1 adtop ad2 ." ". ad1 main ad2 ." ". ad1 footer ad2 ."
+    }
+    #social-nav>.container,
+    #global-nav>.container,
+    #header-image {
+        margin-left: calc(160px + calc(calc(100% - 1070px - 460px) / 2))
+    }
+}
+
+@media screen and (min-width:1670px) {
+    body {
+        grid-template-columns: 1fr 300px 1070px 300px 1fr;
+        grid-template-areas: "nav nav nav nav nav" "header header header header header" ". ad1 adtop ad2 ." ". ad1 main ad2 ." ". ad1 footer ad2 ."
+    }
+}
